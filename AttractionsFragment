@@ -1,0 +1,50 @@
+package com.example.android.tourguide;
+
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class AttractionsFragment extends Fragment {
+
+
+    public AttractionsFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        //Inflate the layout for this fragment
+        View rootView = inflater.inflate(R.layout.list_view, container, false);
+        //Create an ArrayList and add newly created location objects.
+
+        final ArrayList<Location> locations = new ArrayList<>();
+        locations.add(new Location (getString(R.string.canterbury_cathedral), getString(R.string.cathedral_house_11_the_precints_canterbury_ct1_2eh)));
+        locations.add(new Location (getString(R.string.canterbury_roman_museum), getString(R.string.butchery_lane_canterbury_ct1_2jr )));
+        locations.add(new Location (getString(R.string.canterbury_tales), getString(R.string.st_margarets_street_canterbury_ct1_2tg)));
+        locations.add(new Location (getString(R.string.the_marlowe_theatre),getString(R.string.the_friars_canterbury_ct1_2as)));
+        locations.add(new Location (getString (R.string.west_gate_towers), getString(R.string.one_pound_lane_canterbury_ct1_2bz)));
+
+        LocationAdapter adapter = new LocationAdapter(getActivity().locations);
+        ListView listView = rootView.findViewById(R.id.list);
+        listView.setAdapter(adapter);
+
+
+        return rootView;
+
+    }
+
+
+}
