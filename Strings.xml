@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TourGuide</string>
+    <string name="canterbury_cathedral">Canterbury Cathedral</string>
+    <string name="cathedral_house_11_the_precints_canterbury_ct1_2eh">Cathedral House 11 The Precints Canterbury CT1 2EH</string>
+    <string name="canterbury_roman_museum">Canterbury Roman Museum</string>
+    <string name="butchery_lane_canterbury_ct1_2jr">Butchery Lane Canterbury CT1 2JR</string>
+    <string name="canterbury_tales">Canterbury Tales</string>
+    <string name="st_margarets_street_canterbury_ct1_2tg">St Margarets Street Canterbury CT1 2TG</string>
+    <string name="the_marlowe_theatre">The Marlowe Theatre</string>
+    <string name="the_friars_canterbury_ct1_2as">The Friars Canterbury CT1 2AS</string>
+    <string name="west_gate_towers">West Gate Towers</string>
+    <string name="one_pound_lane_canterbury_ct1_2bz">One Pound Lane Canterbury Kent</string>
+    <string name="fun">Fun</string>
+
+</resources>
