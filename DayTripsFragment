@@ -1,0 +1,47 @@
+package com.example.android.tourguide;
+
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class DayTripsFragment extends Fragment {
+
+
+    public DayTripsFragment() {
+        // Required empty public constructor
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        //Inflate the layout for this fragment
+        View rootView = inflater.inflate(R.layout.list_view, container, false);
+        //Create an ArrayList and add newly created location objects.
+
+        final ArrayList<Location> locations = new ArrayList<>();
+        locations.add (new Location(getString(R.string.leeds_castle), (getString(R.string.Penfold_hill_maidstone_kent_me17_1pl))));
+        locations.add (new Location(getString(R.string.dover_castle), (getString(R.string.castle_hill_dover_kent_ct16_1hu))));
+        locations.add (new Location (getString(R.string.port_lympne),(getString(R.string.port_lympne_wildlife_park_aldington_road_lympne_ct21_4lr))));
+        locations.add (new Location (getString(R.string.smugglers_adventure), (getString(R.string.st_clements_caves_cobourg_place_hastings_tn34_3hy))));
+        locations.add (new Location (getString(R.string.wingham_wildlife_park),(getString(R.string.rusham_road_canterbury_ct3_1jl))));
+
+        LocationAdapter adapter = new LocationAdapter(getActivity(),locations);
+        ListView listView = rootView.findViewById(R.id.list);
+        listView.setAdapter(adapter);
+
+        return rootView;
+
+    }
+
+}
